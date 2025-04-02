@@ -102,7 +102,7 @@
         });
     }
     function DisplayPatientListPage() {
-        fetch("http://localhost:5000/api/patients")
+        fetch("https://durham-pharmacy.onrender.com/api/patients")
             .then((response) => {
             if (!response.ok) {
                 throw new Error("Error fetching patient data");
