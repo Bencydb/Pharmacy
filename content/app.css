@@ -255,6 +255,7 @@ footer {
     background-color: #047857; /* Green shade */
     color: white;
     text-align: center;
+    position: fixed;
     padding: 1rem 0;
     width: 100%;
 }
