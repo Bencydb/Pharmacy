@@ -1,0 +1,10 @@
+Server [localhost]: dpg-cv0vi8tds78s73davq0g-a.ohio-postgres.render.com
+Database [postgres]: durham_pharmacy_db
+Port [5432]: 5432
+Username [postgres]: durham_pharmacy_db_user
+Password for user durham_pharmacy_db_user: EIZpoJqfNNcg8TW6jfldKveIWf9yvFau
+
+
+
+send grid
+T9LUD1M1GX1B4JR9RS2P96EA

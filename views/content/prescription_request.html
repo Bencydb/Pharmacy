@@ -1,0 +1,53 @@
+<main>
+    <h2>Refill Medications</h2>
+    <table class="table table-bordered">
+        <thead class="table-success">
+        <tr>
+            <th>Dispensed Date</th>
+            <th>Rx Num</th>
+            <th>Medicine</th>
+            <th>Qty</th>
+            <th>Daily Dose</th>
+            <th>Rem</th>
+            <th>Authorized Qty</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="rxRequest">
+        </tbody>
+    </table>
+
+
+    <h3>Request History</h3>
+    <button id="hideBtn" class="historybtn">Hide History</button>
+    <div id="history" style="max-height: 300px; overflow-y: auto;">
+        <table class="table table-bordered">
+            <thead class="table-responsive">
+            <tr>
+                <th>Request Date</th>
+                <th>Rx Number</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody id="requestHistory"></tbody>
+        </table>
+    </div>
+</main>
+
+<script>
+    const toggleBtn = document.getElementById("hideBtn");
+    const historyContainer = document.getElementById("history");
+
+    toggleBtn.addEventListener("click", () => {
+        if (historyContainer.style.display === "none") {
+            historyContainer.style.display = "block";
+            toggleBtn.textContent = "Hide History";
+        } else {
+            historyContainer.style.display = "none";
+            toggleBtn.textContent = "Show History";
+        }
+    });
+
+</script>
+

@@ -1,0 +1,337 @@
+/*pharmacy*/
+
+/* Reset body to use flex layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #d4f5e9, #b2e8c8); /* Light green gradient */
+}
+
+
+/* Sidebar styles */
+.sidebar {
+    width: 300px; /* Adjust width as needed */
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100vh; /* Ensures full height */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+
+/* Navbar brand styles */
+.sidebar .navbar-brand {
+    padding: 30px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Nav link styles */
+.nav-link {
+    padding: 10px 20px; /* Reduce padding to fit links to the left */
+    color: #333;
+    text-decoration: none;
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+.nav-link:hover {
+    background-color: #e9ecef;
+}
+
+/* Push content next to the sidebar */
+main {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px); /* Ensure content doesn't overflow */
+    overflow-x: hidden;
+    flex: 1; /* Pushes the footer down */
+}
+
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    min-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Table Header */
+thead {
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table Header & Data */
+th, td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(odd) {
+    background-color: #f8f8f8;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eaf6ea;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+    background-color: #d4ebd4;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Table Footer */
+tfoot {
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 10px 12px;
+    }
+}
+
+
+/* Login Container */
+.login {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 100px auto;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Heading Styling */
+.login h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Input Styling */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group-addon {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.input-group-addon i {
+    color: #4CAF50;
+    font-size: 20px;
+}
+
+.form-control {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Login Button Styling */
+button {
+    width: 88%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 10px 1%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button#loginButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+button#loginButton:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button#cancelButton {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+}
+
+button#cancelButton:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+.text-center {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.text-center a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Message Area */
+#messageArea {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login {
+        padding: 2rem;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+footer {
+    background-color: #047857; /* Green shade */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+/* Styling for the Doctor's Form */
+.doctor-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.form-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-submit:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .doctor-form {
+        padding: 15px;
+    }
+
+    .form-submit {
+        width: 100%;
+    }
+}
+
+.historybtn{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.historybtn:hover{
+    background-color: #45a049;
+}

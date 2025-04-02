@@ -1,0 +1,47 @@
+<nav class="sidebar">
+    <a class="navbar-brand" href="/home">Pharmacy <i class="fa-regular fa-hospital"></i> </a>
+    <ul class="navbar-nav">
+        <li id="admin-dashboard" class="nav-item">
+            <a class="nav-link" href="/admin_dashboard"><i class="fa-solid fa-house"></i> Admin Dashboard</a>
+        </li>
+        <li id="patient-list" class="nav-item">
+            <a class="nav-link" href="/patient_list"><i class="fa-solid fa-list"></i> Patient List </a>
+        </li>
+        <li id="request-process" class="nav-item">
+            <a class="nav-link" href="/request_process"><i class="fa-solid fa-user-tie"></i> Request Process</a>
+        </li>
+        <li id="patient-dashboard" class="nav-item">
+            <a class="nav-link" href="/patient_dashboard"><i class="fa-solid fa-hospital-user"></i> Patient Dashboard</a>
+        </li>
+        <li id="prescription-request" class="nav-item">
+            <a class="nav-link" href="/prescription_request"><i class="fa-brands fa-teamspeak"></i> Prescription Request</a>
+        </li>
+        <li id="login" class="nav-item">
+            <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    console.log("Header script is running");
+    const userSession = sessionStorage.getItem("user");
+    console.log("User Session Data:", userSession);
+
+    // Parse the user session data to json
+    const user = JSON.parse(userSession);
+    const userRole = user.role.trim().toLowerCase(); // make them all lowercase
+
+    if (userRole === "admin") {
+        //Admin pages control
+        document.getElementById("patient-dashboard").style.display = "none";
+        document.getElementById("prescription-request").style.display = "none";
+    } else if (userRole === "patient") {
+        //Patient pages control
+
+        document.getElementById("admin-dashboard").style.display = "none";
+        document.getElementById("patient-list").style.display = "none";
+        document.getElementById("request-process").style.display = "none";
+    }
+
+</script>
+
